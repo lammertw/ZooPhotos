@@ -10,7 +10,7 @@
 
 @class ZPDetailViewController;
 
-@interface ZPMasterViewController : UITableViewController
+@interface ZPMasterViewController : UIViewController
 
 @property (strong, nonatomic) ZPDetailViewController *detailViewController;
 

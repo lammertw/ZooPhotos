@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZPFlickrPhoto.h"
 
 @interface ZPDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) ZPFlickrPhoto *photo;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
