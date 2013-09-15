@@ -18,8 +18,8 @@
 
 #warning Change Flickr API & SECRET
 
-#define FLICKR_API_KEY @""
-#define FLICKR_SECRET @""
+#define FLICKR_API_KEY @"06f6f158de8552e6f7d695602fc3dad4"
+#define FLICKR_SECRET @"691e3ee4baceec08"
 
 #define PRAGUE_ZOO_COORDINATE CLLocationCoordinate2DMake(50.118154, 14.405133)
 #define AMSTERDAM_ZOO_COORDINATE CLLocationCoordinate2DMake(52.36618, 4.91537)
@@ -102,7 +102,7 @@
     {
         self.coordinate = AMSTERDAM_ZOO_COORDINATE;
     }
-    else
+    else if (self.locationControl.selectedSegmentIndex == 2)
     {
         [[CBGLocationManager sharedManager] locationRequest:^(CLLocation * location, NSError * error) {
             if (!error)
@@ -110,6 +110,10 @@
                 self.coordinate = location.coordinate;
             }
         }];
+    }
+    else
+    {
+        self.coordinate = CLLocationCoordinate2DMake(0, 0);
     }
 }
 
@@ -221,10 +225,20 @@
 -(void)requestPhotos
 {
     FKFlickrPhotosSearch *photosSearch = [[FKFlickrPhotosSearch alloc] init];
-    photosSearch.lat = [NSNumber numberWithDouble:self.coordinate.latitude].stringValue;
-    photosSearch.lon = [NSNumber numberWithDouble:self.coordinate.longitude].stringValue;
+    if (self.coordinate.latitude != 0 && self.coordinate.longitude != 0)
+    {
+        photosSearch.lat = [NSNumber numberWithDouble:self.coordinate.latitude].stringValue;
+        photosSearch.lon = [NSNumber numberWithDouble:self.coordinate.longitude].stringValue;
+    }
+    else
+    {
+        photosSearch.tag_mode = @"all";
+    }
+    
     photosSearch.radius = @"1";
     photosSearch.license = @"4,5,6,7";
+    photosSearch.sort = @"interestingness-desc";
+    
     
     NSMutableString *tags = [[NSMutableString alloc] init];
     BOOL first = YES;

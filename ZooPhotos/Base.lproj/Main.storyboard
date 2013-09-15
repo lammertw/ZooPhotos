@@ -114,12 +114,13 @@
                                 </connections>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FhW-rJ-uNu">
-                                <rect key="frame" x="22" y="30" width="278" height="29"/>
+                                <rect key="frame" x="6" y="30" width="309" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Prague Zoo"/>
+                                    <segment title="Prague"/>
                                     <segment title="Amsterdam"/>
-                                    <segment title="My Location"/>
+                                    <segment title="Current"/>
+                                    <segment title="Off"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeLocation:" destination="vLS-zt-CyT" eventType="valueChanged" id="KS5-9i-MBh"/>
@@ -139,7 +140,7 @@
                             <constraint firstItem="4RA-yL-XUx" firstAttribute="top" secondItem="FhW-rJ-uNu" secondAttribute="bottom" constant="8" symbolic="YES" id="lSA-wn-fRj"/>
                             <constraint firstItem="MwZ-zQ-ayq" firstAttribute="baseline" secondItem="B4L-YP-LkN" secondAttribute="baseline" id="mui-st-Dnd"/>
                             <constraint firstItem="FhW-rJ-uNu" firstAttribute="top" secondItem="9LZ-3P-uly" secondAttribute="bottom" constant="10" id="ooG-b2-g5W"/>
-                            <constraint firstAttribute="trailing" secondItem="FhW-rJ-uNu" secondAttribute="trailing" constant="20" symbolic="YES" id="pLk-g7-GfJ"/>
+                            <constraint firstAttribute="trailing" secondItem="FhW-rJ-uNu" secondAttribute="trailing" constant="5" id="pLk-g7-GfJ"/>
                             <constraint firstItem="4RA-yL-XUx" firstAttribute="leading" secondItem="B4L-YP-LkN" secondAttribute="trailing" constant="8" symbolic="YES" id="rXp-Pi-dm2"/>
                             <constraint firstItem="EHD-Wf-ZXu" firstAttribute="leading" secondItem="pQJ-x6-72i" secondAttribute="leading" id="srP-g6-MG5"/>
                             <constraint firstItem="EHD-Wf-ZXu" firstAttribute="top" secondItem="B4L-YP-LkN" secondAttribute="bottom" constant="8" symbolic="YES" id="uEe-Zc-8KC"/>
@@ -175,7 +176,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-R5-f0x">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="663" translatesAutoresizingMaskIntoConstraints="NO" id="ZcM-R5-f0x">
                                 <rect key="frame" x="20" y="727" width="663" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
