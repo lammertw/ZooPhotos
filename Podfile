@@ -1,0 +1,5 @@
+platform :ios, '7.0' 
+pod 'FlickrKit', '~> 1.0.2'
+pod 'UIActivityIndicator-for-SDWebImage', '~> 1.0.0'
+pod 'SDNetworkActivityIndicator', '~> 0.0.1'
+pod 'AFNetworking', '~> 1.3.2'
