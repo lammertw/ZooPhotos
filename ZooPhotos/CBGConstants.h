@@ -5,11 +5,6 @@
 
 //Objective Flickr API
 
-#warning Change Flickr API & SECRET
-
-#define OBJECTIVE_FLICKR_API_KEY @"06f6f158de8552e6f7d695602fc3dad4"
-#define OBJECTIVE_FLICKR_API_SHARED_SECRET @"691e3ee4baceec08"
-
 /*
  <licenses>
  <license id="0" name="All Rights Reserved"

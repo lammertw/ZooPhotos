@@ -16,8 +16,10 @@
 #import <SDNetworkActivityIndicator/SDNetworkActivityIndicator.h>
 #import "CBGLocationManager.h"
 
-#define FLICKR_API_KEY @"06f6f158de8552e6f7d695602fc3dad4"
-#define FLICKR_SECRET @"691e3ee4baceec08"
+#warning Change Flickr API & SECRET
+
+#define FLICKR_API_KEY @""
+#define FLICKR_SECRET @""
 
 #define PRAGUE_ZOO_COORDINATE CLLocationCoordinate2DMake(50.118154, 14.405133)
 #define AMSTERDAM_ZOO_COORDINATE CLLocationCoordinate2DMake(52.36618, 4.91537)
